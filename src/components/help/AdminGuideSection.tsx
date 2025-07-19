@@ -442,11 +442,12 @@ export function AdminGuideSection() {
       </Card>
 
       <Tabs defaultValue="guides" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="guides">Guides</TabsTrigger>
           <TabsTrigger value="security">Sécurité</TabsTrigger>
           <TabsTrigger value="maintenance">Maintenance</TabsTrigger>
           <TabsTrigger value="monitoring">Monitoring</TabsTrigger>
+          <TabsTrigger value="deployment">Déploiement</TabsTrigger>
         </TabsList>
 
         <TabsContent value="guides" className="space-y-6">
@@ -755,6 +756,270 @@ export function AdminGuideSection() {
               </CardContent>
             </Card>
           </div>
+        </TabsContent>
+
+        <TabsContent value="deployment" className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Server className="w-5 h-5 text-blue-600" />
+                  Guide de déploiement complet
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 bg-blue-50 rounded-lg">
+                    <h4 className="font-semibold mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-blue-600" />
+                      Prérequis système
+                    </h4>
+                    <ul className="text-sm text-gray-600 space-y-2">
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        Node.js 18+ et npm/yarn
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        Base de données PostgreSQL 14+
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        Serveur web (Nginx/Apache)
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        SSL/TLS configuré
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        Redis pour le cache (recommandé)
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        Elasticsearch pour la recherche avancée
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="p-4 bg-green-50 rounded-lg">
+                    <h4 className="font-semibold mb-3 flex items-center gap-2">
+                      <Play className="w-4 h-4 text-green-600" />
+                      Étapes de déploiement
+                    </h4>
+                    <ol className="text-sm text-gray-600 space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-green-100 text-green-800 text-xs mt-0.5">1</Badge>
+                        <div>
+                          <strong>Préparation de l'environnement</strong>
+                          <p className="text-xs text-gray-500 mt-1">Installation des dépendances système et configuration des services</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-green-100 text-green-800 text-xs mt-0.5">2</Badge>
+                        <div>
+                          <strong>Clonage et installation</strong>
+                          <p className="text-xs text-gray-500 mt-1">Repository, npm install, et configuration des modules</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-green-100 text-green-800 text-xs mt-0.5">3</Badge>
+                        <div>
+                          <strong>Configuration des variables</strong>
+                          <p className="text-xs text-gray-500 mt-1">Fichiers .env, secrets, clés API et paramètres réseau</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-green-100 text-green-800 text-xs mt-0.5">4</Badge>
+                        <div>
+                          <strong>Base de données</strong>
+                          <p className="text-xs text-gray-500 mt-1">Migrations, seeding, index et optimisations</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-green-100 text-green-800 text-xs mt-0.5">5</Badge>
+                        <div>
+                          <strong>Build et compilation</strong>
+                          <p className="text-xs text-gray-500 mt-1">Production build, optimisation des assets</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-green-100 text-green-800 text-xs mt-0.5">6</Badge>
+                        <div>
+                          <strong>Serveur web et SSL</strong>
+                          <p className="text-xs text-gray-500 mt-1">Configuration Nginx/Apache, certificats SSL, domaines</p>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Settings className="w-5 h-5 text-purple-600" />
+                  Configuration avancée
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 bg-purple-50 rounded-lg">
+                    <h4 className="font-semibold mb-3 flex items-center gap-2">
+                      <Database className="w-4 h-4 text-purple-600" />
+                      Performance et optimisation
+                    </h4>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div className="flex justify-between items-center p-2 bg-white rounded border">
+                        <span>Cache Redis</span>
+                        <Badge className="bg-green-100 text-green-800">Activé</Badge>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-white rounded border">
+                        <span>Compression Gzip</span>
+                        <Badge className="bg-green-100 text-green-800">Activé</Badge>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-white rounded border">
+                        <span>CDN Cloudflare</span>
+                        <Badge className="bg-yellow-100 text-yellow-800">Recommandé</Badge>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-white rounded border">
+                        <span>Monitoring APM</span>
+                        <Badge className="bg-blue-100 text-blue-800">Configuré</Badge>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-orange-50 rounded-lg">
+                    <h4 className="font-semibold mb-3 flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4 text-orange-600" />
+                      Environnements de déploiement
+                    </h4>
+                    <div className="space-y-3">
+                      <div className="p-3 bg-white rounded border">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-medium text-sm">Production</span>
+                          <Badge className="bg-green-100 text-green-800">Stable</Badge>
+                        </div>
+                        <p className="text-xs text-gray-600">Environnement principal avec haute disponibilité</p>
+                        <div className="flex gap-2 mt-2">
+                          <Badge variant="outline" className="text-xs">Load Balancer</Badge>
+                          <Badge variant="outline" className="text-xs">Auto-scaling</Badge>
+                        </div>
+                      </div>
+                      
+                      <div className="p-3 bg-white rounded border">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-medium text-sm">Staging</span>
+                          <Badge className="bg-blue-100 text-blue-800">Test</Badge>
+                        </div>
+                        <p className="text-xs text-gray-600">Environnement de pré-production pour tests</p>
+                        <div className="flex gap-2 mt-2">
+                          <Badge variant="outline" className="text-xs">CI/CD</Badge>
+                          <Badge variant="outline" className="text-xs">Tests auto</Badge>
+                        </div>
+                      </div>
+                      
+                      <div className="p-3 bg-white rounded border">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-medium text-sm">Développement</span>
+                          <Badge className="bg-gray-100 text-gray-800">Local</Badge>
+                        </div>
+                        <p className="text-xs text-gray-600">Environnement local pour développement</p>
+                        <div className="flex gap-2 mt-2">
+                          <Badge variant="outline" className="text-xs">Docker</Badge>
+                          <Badge variant="outline" className="text-xs">Hot Reload</Badge>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Smartphone className="w-5 h-5 text-green-600" />
+                Scripts et commandes de déploiement
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold mb-3">Scripts de déploiement automatisé</h4>
+                  <div className="space-y-2">
+                    <Button size="sm" variant="outline" className="w-full justify-start">
+                      <Download className="w-4 h-4 mr-2" />
+                      deploy-production.sh
+                    </Button>
+                    <Button size="sm" variant="outline" className="w-full justify-start">
+                      <Download className="w-4 h-4 mr-2" />
+                      deploy-staging.sh
+                    </Button>
+                    <Button size="sm" variant="outline" className="w-full justify-start">
+                      <Download className="w-4 h-4 mr-2" />
+                      rollback.sh
+                    </Button>
+                    <Button size="sm" variant="outline" className="w-full justify-start">
+                      <Download className="w-4 h-4 mr-2" />
+                      health-check.sh
+                    </Button>
+                  </div>
+                </div>
+                
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold mb-3">Configuration Docker</h4>
+                  <div className="space-y-2">
+                    <Button size="sm" variant="outline" className="w-full justify-start">
+                      <Download className="w-4 h-4 mr-2" />
+                      Dockerfile
+                    </Button>
+                    <Button size="sm" variant="outline" className="w-full justify-start">
+                      <Download className="w-4 h-4 mr-2" />
+                      docker-compose.yml
+                    </Button>
+                    <Button size="sm" variant="outline" className="w-full justify-start">
+                      <Download className="w-4 h-4 mr-2" />
+                      .dockerignore
+                    </Button>
+                    <Button size="sm" variant="outline" className="w-full justify-start">
+                      <Download className="w-4 h-4 mr-2" />
+                      kubernetes.yaml
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                <h4 className="font-semibold mb-3 flex items-center gap-2">
+                  <Book className="w-4 h-4 text-blue-600" />
+                  Commandes essentielles
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="font-medium mb-2">Déploiement initial</p>
+                    <div className="space-y-1 text-xs text-gray-600 font-mono bg-white p-2 rounded">
+                      <p>git clone repository</p>
+                      <p>npm install --production</p>
+                      <p>npm run build</p>
+                      <p>pm2 start ecosystem.config.js</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-medium mb-2">Mise à jour</p>
+                    <div className="space-y-1 text-xs text-gray-600 font-mono bg-white p-2 rounded">
+                      <p>git pull origin main</p>
+                      <p>npm install</p>
+                      <p>npm run build</p>
+                      <p>pm2 reload dalil-app</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </TabsContent>
       </Tabs>
 

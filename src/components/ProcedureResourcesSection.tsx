@@ -22,6 +22,30 @@ export function ProcedureResourcesSection() {
         </TabsList>
 
         <TabsContent value="guides" className="space-y-4">
+          {/* Tableau de bord des guides */}
+          <Card className="bg-gradient-to-r from-blue-50 to-green-50 border-none">
+            <CardContent className="pt-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">28</div>
+                  <div className="text-sm text-gray-600">Guides disponibles</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">125k</div>
+                  <div className="text-sm text-gray-600">Consultations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">4.8/5</div>
+                  <div className="text-sm text-gray-600">Note moyenne</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-600">95%</div>
+                  <div className="text-sm text-gray-600">Satisfaction</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Card className="hover:shadow-md transition-shadow">
               <CardHeader className="pb-3">
@@ -173,6 +197,30 @@ export function ProcedureResourcesSection() {
         </TabsContent>
 
         <TabsContent value="formulaires" className="space-y-4">
+          {/* Tableau de bord des formulaires */}
+          <Card className="bg-gradient-to-r from-purple-50 to-blue-50 border-none">
+            <CardContent className="pt-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">68</div>
+                  <div className="text-sm text-gray-600">Formulaires disponibles</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">89k</div>
+                  <div className="text-sm text-gray-600">Téléchargements</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">24h</div>
+                  <div className="text-sm text-gray-600">Mise à jour moyenne</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-600">100%</div>
+                  <div className="text-sm text-gray-600">Conformité légale</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Card className="hover:shadow-md transition-shadow">
               <CardHeader className="pb-3">

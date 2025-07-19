@@ -406,47 +406,15 @@ export function HelpSections({ section, language = "fr" }: HelpSectionsProps) {
 
               <TabsContent value="technical-doc" className="space-y-4">
                 <Tabs defaultValue="overview" className="w-full">
-                  <TabsList className="grid w-full grid-cols-3">
+                  <TabsList className="grid w-full grid-cols-2">
                     <TabsTrigger value="overview">Fiche technique</TabsTrigger>
                     <TabsTrigger value="api-doc">Documentation API</TabsTrigger>
-                    <TabsTrigger value="deployment">Déploiement</TabsTrigger>
                   </TabsList>
                   <TabsContent value="overview">
                     <TechnicalSpecification />
                   </TabsContent>
                   <TabsContent value="api-doc">
                     <APIDocumentationSection />
-                  </TabsContent>
-                  <TabsContent value="deployment">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Guide de Déploiement</CardTitle>
-                        <CardDescription>Instructions pour déployer et configurer l'application</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
-                          <div className="p-4 bg-blue-50 rounded-lg">
-                            <h4 className="font-semibold mb-2">Prérequis système</h4>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              <li>• Node.js 18+ et npm/yarn</li>
-                              <li>• Base de données PostgreSQL 14+</li>
-                              <li>• Serveur web (Nginx/Apache)</li>
-                              <li>• SSL/TLS configuré</li>
-                            </ul>
-                          </div>
-                          <div className="p-4 bg-green-50 rounded-lg">
-                            <h4 className="font-semibold mb-2">Étapes de déploiement</h4>
-                            <ol className="text-sm text-gray-600 space-y-1">
-                              <li>1. Cloner le repository et installer les dépendances</li>
-                              <li>2. Configurer les variables d'environnement</li>
-                              <li>3. Initialiser la base de données</li>
-                              <li>4. Compiler l'application (build production)</li>
-                              <li>5. Configurer le serveur web et les certificats</li>
-                            </ol>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
                   </TabsContent>
                 </Tabs>
               </TabsContent>
