@@ -88,24 +88,120 @@ export function HelpSections({ section, language = "fr" }: HelpSectionsProps) {
               <p className="text-gray-600 text-lg">{getText("aboutDesc")}</p>
             </div>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>À propos de Dalil.dz</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <p className="text-gray-600">
-                    Dalil.dz est la plateforme nationale de veille juridique et réglementaire de l'Algérie.
-                    Elle offre un accès centralisé aux textes juridiques, procédures administratives et 
-                    ressources juridiques du pays.
-                  </p>
-                  <p className="text-gray-600">
-                    Notre mission est de faciliter l'accès à l'information juridique pour tous les 
-                    professionnels du droit, les institutions et les citoyens.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>À propos de Dalil.dz</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <p className="text-gray-600">
+                      Dalil.dz est la plateforme nationale de veille juridique et réglementaire de l'Algérie.
+                      Elle offre un accès centralisé aux textes juridiques, procédures administratives et 
+                      ressources juridiques du pays.
+                    </p>
+                    <p className="text-gray-600">
+                      Notre mission est de faciliter l'accès à l'information juridique pour tous les 
+                      professionnels du droit, les institutions et les citoyens.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Statistiques de la plateforme</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center p-3 bg-green-50 rounded-lg">
+                      <div className="text-2xl font-bold text-green-600">2,847</div>
+                      <div className="text-sm text-gray-600">Textes juridiques</div>
+                    </div>
+                    <div className="text-center p-3 bg-blue-50 rounded-lg">
+                      <div className="text-2xl font-bold text-blue-600">1,234</div>
+                      <div className="text-sm text-gray-600">Procédures</div>
+                    </div>
+                    <div className="text-center p-3 bg-purple-50 rounded-lg">
+                      <div className="text-2xl font-bold text-purple-600">15,672</div>
+                      <div className="text-sm text-gray-600">Utilisateurs actifs</div>
+                    </div>
+                    <div className="text-center p-3 bg-orange-50 rounded-lg">
+                      <div className="text-2xl font-bold text-orange-600">98.7%</div>
+                      <div className="text-sm text-gray-600">Taux de satisfaction</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Notre équipe</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <p className="text-gray-600 text-sm">
+                      Une équipe de juristes, développeurs et experts en digitalisation 
+                      travaille quotidiennement pour améliorer vos services.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                        <span className="text-sm text-gray-600">25+ experts juridiques</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span className="text-sm text-gray-600">15+ développeurs</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                        <span className="text-sm text-gray-600">Support 24h/7j</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Partenaires institutionnels</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-sm text-gray-600">
+                    <p>• Ministère de la Justice</p>
+                    <p>• Conseil d'État</p>
+                    <p>• Cour Suprême</p>
+                    <p>• Ministère de l'Intérieur</p>
+                    <p>• Ordre des Avocats</p>
+                    <p>• Chambre Notariale</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Version et mise à jour</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="space-y-1">
+                      <p className="text-sm font-medium">Version actuelle</p>
+                      <Badge variant="outline">v2.3.1</Badge>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-sm font-medium">Dernière mise à jour</p>
+                      <p className="text-sm text-gray-600">{new Date().toLocaleDateString('fr-FR')}</p>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-sm font-medium">Prochaine version</p>
+                      <p className="text-sm text-gray-600">v2.4.0 - Q2 2024</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         );
 
@@ -120,7 +216,7 @@ export function HelpSections({ section, language = "fr" }: HelpSectionsProps) {
               <p className="text-gray-600 text-lg">{getText("contactDesc")}</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -131,6 +227,7 @@ export function HelpSections({ section, language = "fr" }: HelpSectionsProps) {
                 <CardContent>
                   <p className="text-gray-600">contact@dalil.dz</p>
                   <p className="text-gray-600">support@dalil.dz</p>
+                  <p className="text-gray-600">info@dalil.dz</p>
                 </CardContent>
               </Card>
 
@@ -143,10 +240,57 @@ export function HelpSections({ section, language = "fr" }: HelpSectionsProps) {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">+213 21 XX XX XX</p>
+                  <p className="text-gray-600">Numéro vert: 3020</p>
                   <p className="text-gray-600">Lun-Ven: 8h-17h</p>
                 </CardContent>
               </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <HelpCircle className="w-5 h-5 text-green-600" />
+                    Localisation
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    <p className="text-gray-600 font-medium">Adresse</p>
+                    <p className="text-gray-600 text-sm">Ministère de la Justice, Alger, Algérie</p>
+                    <p className="text-gray-600 font-medium">GPS</p>
+                    <p className="text-gray-600 text-sm">36.7528° N, 3.0420° E</p>
+                    <Button variant="outline" size="sm" className="w-full mt-2">
+                      Voir sur la carte
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
+
+            <Card className="mt-6">
+              <CardHeader>
+                <CardTitle>Autres moyens de contact</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <h4 className="font-medium">Réseaux sociaux</h4>
+                    <div className="space-y-1 text-sm text-gray-600">
+                      <p>Facebook: @DalilDZ</p>
+                      <p>LinkedIn: Dalil.dz</p>
+                      <p>Twitter: @dalil_dz</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-medium">Horaires d'ouverture</h4>
+                    <div className="space-y-1 text-sm text-gray-600">
+                      <p>Lundi - Jeudi: 8h00 - 16h30</p>
+                      <p>Vendredi: 8h00 - 12h00</p>
+                      <p>Support en ligne 24h/7j</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         );
 
@@ -162,24 +306,21 @@ export function HelpSections({ section, language = "fr" }: HelpSectionsProps) {
             </div>
 
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="grid w-full grid-cols-7">
+              <TabsList className="grid w-full grid-cols-6">
                 <TabsTrigger value="faq" className="flex items-center gap-2 text-sm">
                   {getText("faq")}
                 </TabsTrigger>
                 <TabsTrigger value="chat" className="flex items-center gap-2 text-sm">
                   {getText("chatSupport")}
                 </TabsTrigger>
-                <TabsTrigger value="help" className="flex items-center gap-2 text-sm">
-                  {getText("helpCenter")}
-                </TabsTrigger>
                 <TabsTrigger value="user-guide" className="flex items-center gap-2 text-sm">
                   {getText("userGuide")}
                 </TabsTrigger>
+                <TabsTrigger value="video-tutorials" className="flex items-center gap-2 text-sm">
+                  {getText("videoTutorials")}
+                </TabsTrigger>
                 <TabsTrigger value="admin-guide" className="flex items-center gap-2 text-sm">
                   {getText("adminGuide")}
-                </TabsTrigger>
-                <TabsTrigger value="api-doc" className="flex items-center gap-2 text-sm">
-                  {getText("apiDoc")}
                 </TabsTrigger>
                 <TabsTrigger value="technical-doc" className="flex items-center gap-2 text-sm">
                   <FileText className="w-4 h-4" />
@@ -250,35 +391,6 @@ export function HelpSections({ section, language = "fr" }: HelpSectionsProps) {
                 </Card>
               </TabsContent>
 
-              <TabsContent value="help" className="space-y-4">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <HelpCircle className="w-5 h-5 text-green-600" />
-                      Centre d'aide
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <p className="text-gray-600">Consultez notre documentation complète et nos guides d'utilisation.</p>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <Button variant="outline" onClick={() => setActiveTab("user-guide")}>
-                          Guide utilisateur
-                        </Button>
-                        <Button variant="outline" onClick={() => setActiveTab("video-tutorials")}>
-                          Tutoriels vidéo
-                        </Button>
-                        <Button variant="outline" onClick={() => setActiveTab("api-doc")}>
-                          Documentation API
-                        </Button>
-                        <Button variant="outline" onClick={() => setActiveTab("admin-guide")}>
-                          Guides administrateur
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
 
               <TabsContent value="user-guide" className="space-y-4">
                 <UserGuideSection />
@@ -288,16 +400,55 @@ export function HelpSections({ section, language = "fr" }: HelpSectionsProps) {
                 <AdminGuideSection />
               </TabsContent>
 
-              <TabsContent value="api-doc" className="space-y-4">
-                <APIDocumentationSection />
-              </TabsContent>
-
               <TabsContent value="video-tutorials" className="space-y-4">
                 <VideoTutorialsSection />
               </TabsContent>
 
               <TabsContent value="technical-doc" className="space-y-4">
-                <TechnicalSpecification />
+                <Tabs defaultValue="overview" className="w-full">
+                  <TabsList className="grid w-full grid-cols-3">
+                    <TabsTrigger value="overview">Fiche technique</TabsTrigger>
+                    <TabsTrigger value="api-doc">Documentation API</TabsTrigger>
+                    <TabsTrigger value="deployment">Déploiement</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="overview">
+                    <TechnicalSpecification />
+                  </TabsContent>
+                  <TabsContent value="api-doc">
+                    <APIDocumentationSection />
+                  </TabsContent>
+                  <TabsContent value="deployment">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Guide de Déploiement</CardTitle>
+                        <CardDescription>Instructions pour déployer et configurer l'application</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-4">
+                          <div className="p-4 bg-blue-50 rounded-lg">
+                            <h4 className="font-semibold mb-2">Prérequis système</h4>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              <li>• Node.js 18+ et npm/yarn</li>
+                              <li>• Base de données PostgreSQL 14+</li>
+                              <li>• Serveur web (Nginx/Apache)</li>
+                              <li>• SSL/TLS configuré</li>
+                            </ul>
+                          </div>
+                          <div className="p-4 bg-green-50 rounded-lg">
+                            <h4 className="font-semibold mb-2">Étapes de déploiement</h4>
+                            <ol className="text-sm text-gray-600 space-y-1">
+                              <li>1. Cloner le repository et installer les dépendances</li>
+                              <li>2. Configurer les variables d'environnement</li>
+                              <li>3. Initialiser la base de données</li>
+                              <li>4. Compiler l'application (build production)</li>
+                              <li>5. Configurer le serveur web et les certificats</li>
+                            </ol>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </TabsContent>
+                </Tabs>
               </TabsContent>
             </Tabs>
           </div>
